@@ -1,10 +1,12 @@
 {
-  "main.css": "static/css/main.2a4f83b1.css",
-  "main.css.map": "static/css/main.2a4f83b1.css.map",
-  "main.js": "static/js/main.ad3ef096.js",
-  "main.js.map": "static/js/main.ad3ef096.js.map",
+  "main.css": "static/css/main.5f525d51.css",
+  "main.css.map": "static/css/main.5f525d51.css.map",
+  "main.js": "static/js/main.aa2e8c00.js",
+  "main.js.map": "static/js/main.aa2e8c00.js.map",
   "static/media/Sophia.woff": "static/media/Sophia.8eb7493e.woff",
   "static/media/Sophia.woff2": "static/media/Sophia.0aceb20e.woff2",
+  "static/media/SophiaLeft.woff": "static/media/SophiaLeft.0ec74be1.woff",
+  "static/media/SophiaLeft.woff2": "static/media/SophiaLeft.15784c23.woff2",
   "static/media/SophiaRight.woff": "static/media/SophiaRight.6c6d5bfc.woff",
   "static/media/SophiaRight.woff2": "static/media/SophiaRight.1a81604d.woff2"
 }
