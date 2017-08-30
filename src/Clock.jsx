@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './style/App.css';
 
 class Clock extends Component {
   constructor(props) {
@@ -32,20 +32,47 @@ class Clock extends Component {
     const hours = Math.floor(time / (1000 * 60 * 60) % 60) % 24;
     const days = Math.floor(time / (1000 * 60 * 60 * 24));
     const weeks = Math.floor(time / (1000 * 60 * 60 * 24) / 7);
+    const months = Math.floor(time / (1000 * 60 * 60 * 24) / 30);
 
-    this.setState({weeks, days, hours, minutes, seconds});
+    this.setState({months, weeks, days, hours, minutes, seconds});
 
 
   }
 
   render() {
     return (
-      <div>
-        <div className = 'Clock-weeks d-inline'>{this.leading0(this.state.weeks)} weeks</div>
-        <div className = 'Clock-days d-inline'>{this.leading0(this.state.days)} days</div>
-        <div className = 'Clock-hours d-inline'>{this.leading0(this.state.hours)} hours</div>
-        <div className = 'Clock-minutes d-inline'>{this.leading0(this.state.minutes)} minutes</div>
-        <div className = 'Clock-seconds d-inline'>{this.leading0(this.state.seconds)} seconds</div>
+      <div className = 'clock'>
+        <div>
+          <div className = 'clock-date d-inline'>
+            March 31<sup>st</sup> 2018
+          </div>
+        </div>
+        <div>
+          <div className = 'clock-weeks d-inline'>
+            {this.leading0(this.state.months)}
+            <span className = 'mini'>Months</span>
+          </div>
+          <div className = 'clock-weeks d-inline'>
+            {this.leading0(this.state.weeks)}
+            <span className = 'mini'>Weeks</span>
+          </div>
+          <div className = 'clock-days d-inline'>
+            {this.leading0(this.state.days)}
+            <span className = 'mini'>Days</span>
+          </div>
+          <div className = 'clock-hours d-inline'>
+            {this.leading0(this.state.hours)}
+            <span className = 'mini'>Hours</span>
+          </div>
+          <div className = 'clock-minutes d-inline'>
+            {this.leading0(this.state.minutes)}
+            <span className = 'mini'>Months</span>
+          </div>
+          <div className = 'clock-seconds d-inline'>
+            {this.leading0(this.state.seconds)}
+            <span className = 'mini'>Seconds</span>
+          </div>
+        </div>
       </div>
     )
   }

@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@font-face {
+  font-family: 'sophia';
+  src: url('Sophia.woff2') format('woff2'),
+       url('Sophia.woff') format('woff');
+}
+@font-face {
+  font-family: 'sophia-right';
+  src: url('SophiaRight.woff2') format('woff2'),
+       url('SophiaRight.woff') format('woff');
+}
+@font-face {
+  font-family: 'sophia-left';
+  src: url('SophiaLeft.woff2') format('woff2'),
+       url('SophiaLeft.woff') format('woff');
+}
+
+body {
+  margin: 0;
+}
+
+.App {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  padding-top: 8%;
+}
+
+.App:before {
+  background-image: url('https://images.unsplash.com/photo-1444394668777-6fa6de8b8356?');
+  background-position: center;
+  background-size: cover;
+  content: '';
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  z-index: -1;
+  opacity: 0.45;
+  filter: blur(5px);
+}
+
+/* Main text */
+
+.hashtag {
+  background: linear-gradient(120deg, rgb(147, 112, 219), rgb(255, 197, 208));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: 17rem;
+  font-family: 'sophia';
+}
+
+.r-tails {
+  font-family: 'sophia-right';
+}
+
+.l-tails {
+  font-family: 'sophia-left';
+}
+
+/* Countdown */
+
+.d-inline {
+  display: inline-block;
+  margin: .5rem;
+}
+
+.clock {
+  font-size: 2.2rem;
+  font-family: 'Nunito', sans-serif;
+  color: #fff;
+  margin-top: -1.5rem;
+}
+
+.mini {
+  display: block;
+  font-size: 1rem;
+  text-transform: lowercase;
+}
+
+@media only screen and (max-width: 600px) {
+  .App {
+    padding-top: 25%;
+  }
+  .hashtag {
+    font-size: 12rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .App {
+    padding-top: 35%;
+  }
+  .hashtag {
+    font-size: 10rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .App {
+    padding-top: 45%;
+  }
+  .hashtag {
+    font-size: 10rem;
+  }
+
+  .clock {
+    font-size: 1.8rem;
+  }
+
+  .mini {
+    font-size: .8rem;
+  }
+}
