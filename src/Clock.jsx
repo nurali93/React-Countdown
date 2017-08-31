@@ -27,6 +27,7 @@ class Clock extends Component {
 
   getTimeUntil(deadline) {
     const time = Date.parse(deadline) - Date.parse(new Date());
+
     const seconds = Math.floor((time / 1000) % 60);
     const minutes = Math.floor((time / 1000 / 60) % 60);
     const hours = Math.floor(time / (1000 * 60 * 60) % 60) % 24;
@@ -41,36 +42,36 @@ class Clock extends Component {
 
   render() {
     return (
-      <div className = 'clock'>
+      <div className = 'countdown-timer'>
         <div>
           <div className = 'clock-date d-inline'>
             March 31<sup>st</sup> 2018
           </div>
         </div>
         <div>
-          <div className = 'clock-weeks d-inline'>
+          <div className = 'd-inline'>
             {this.leading0(this.state.months)}
-            <span className = 'mini'>Months</span>
+            <span className = 'mini-text'>Months</span>
           </div>
-          <div className = 'clock-weeks d-inline'>
+          <div className = 'd-inline'>
             {this.leading0(this.state.weeks)}
-            <span className = 'mini'>Weeks</span>
+            <span className = 'mini-text'>Weeks</span>
           </div>
-          <div className = 'clock-days d-inline'>
+          <div className = 'd-inline'>
             {this.leading0(this.state.days)}
-            <span className = 'mini'>Days</span>
+            <span className = 'mini-text'>Days</span>
           </div>
-          <div className = 'clock-hours d-inline'>
+          <div className = 'd-inline'>
             {this.leading0(this.state.hours)}
-            <span className = 'mini'>Hours</span>
+            <span className = 'mini-text'>Hours</span>
           </div>
-          <div className = 'clock-minutes d-inline'>
+          <div className = 'd-inline'>
             {this.leading0(this.state.minutes)}
-            <span className = 'mini'>Months</span>
+            <span className = 'mini-text'>Months</span>
           </div>
-          <div className = 'clock-seconds d-inline'>
+          <div className = 'd-inline'>
             {this.leading0(this.state.seconds)}
-            <span className = 'mini'>Seconds</span>
+            <span className = 'mini-text'>Seconds</span>
           </div>
         </div>
       </div>
