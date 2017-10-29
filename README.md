@@ -26,5 +26,5 @@ This must be run if it's the first time you launch the app or there are any miss
 Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ===
-![background](/images/localhost.jpg?raw=true "bg")
+![background](/images/localhost.png?raw=true "bg")
 
