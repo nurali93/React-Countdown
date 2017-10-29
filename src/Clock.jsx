@@ -21,9 +21,7 @@ class Clock extends Component {
     setInterval(() => this.getTimeUntil(this.props.deadline), 1000)
   }
 
-  leading0(num) {
-    return num < 10 ? '0' + num : num;
-  }
+
 
   getTimeUntil(deadline) {
     const time = Date.parse(deadline) - Date.parse(new Date());
@@ -50,29 +48,9 @@ class Clock extends Component {
         </div>
         <div>
           <div className = 'd-inline'>
-            {this.leading0(this.state.months)}
-            <span className = 'mini-text'>Months</span>
+            {this.state.months} Months left
           </div>
-          <div className = 'd-inline'>
-            {this.leading0(this.state.weeks)}
-            <span className = 'mini-text'>Weeks</span>
-          </div>
-          <div className = 'd-inline'>
-            {this.leading0(this.state.days)}
-            <span className = 'mini-text'>Days</span>
-          </div>
-          <div className = 'd-inline'>
-            {this.leading0(this.state.hours)}
-            <span className = 'mini-text'>Hours</span>
-          </div>
-          <div className = 'd-inline'>
-            {this.leading0(this.state.minutes)}
-            <span className = 'mini-text'>Months</span>
-          </div>
-          <div className = 'd-inline'>
-            {this.leading0(this.state.seconds)}
-            <span className = 'mini-text'>Seconds</span>
-          </div>
+          
         </div>
       </div>
     )
