@@ -1,18 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Playfair Display Regular'), local('PlayfairDisplay-Regular'), url('playfairDisplay.woff2') format('woff2');
+}
+
 @font-face {
   font-family: 'sophia';
-  src: url('Sophia.woff2') format('woff2'),
-       url('Sophia.woff') format('woff');
+  src: url('Sophia.woff2') format('woff2');
 }
 @font-face {
   font-family: 'sophia-right';
-  src: url('SophiaRight.woff2') format('woff2'),
-       url('SophiaRight.woff') format('woff');
+  src: url('SophiaRight.woff2') format('woff2');
 }
 @font-face {
   font-family: 'sophia-left';
-  src: url('SophiaLeft.woff2') format('woff2'),
-       url('SophiaLeft.woff') format('woff');
+  src: url('SophiaLeft.woff2') format('woff2');
 }
 
 /* Background Settings */
@@ -22,33 +25,32 @@ body {
 }
 
 .App {
-  position: relative;
   height: 100vh;
-  text-align: center;
   padding-top: 8%;
+  position: relative;
+  text-align: center;
 }
 
 .App:before {
-  background-image: url('https://images.unsplash.com/photo-1444394668777-6fa6de8b8356?');
+  background-image: url('flower-bg.jpg');
   background-position: center;
   background-size: cover;
   content: '';
+  filter: blur(5px);
+  opacity: 0.45;
   position: absolute;
   left: 0; right: 0; top: 0; bottom: 0;
   z-index: -1;
-  opacity: 0.45;
-  filter: blur(5px);
 }
 
 /* Main text */
 
 .hashtag {
   background: linear-gradient(120deg, rgb(147, 112, 219), rgb(255, 197, 208));
+  font-family: 'sophia';
+  font-size: 17rem;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  font-size: 17rem;
-  font-family: 'sophia';
 }
 
 .r-tails {
@@ -67,9 +69,9 @@ body {
 }
 
 .countdown-timer {
+  color: #fff;
   font-size: 2.2rem;
   font-family: 'Playfair Display', serif;
-  color: #fff;
   margin-top: -1.5rem;
 }
 

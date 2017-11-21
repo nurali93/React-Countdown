@@ -67,7 +67,7 @@ class Clock extends Component {
           </div>
           <div className = 'd-inline'>
             {this.leading0(this.state.minutes)}
-            <span className = 'mini-text'>Months</span>
+            <span className = 'mini-text'>Minutes</span>
           </div>
           <div className = 'd-inline'>
             {this.leading0(this.state.seconds)}
