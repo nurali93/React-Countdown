@@ -20,6 +20,10 @@ class Clock extends Component {
   componentDidMount() {
     setInterval(() => this.getTimeUntil(this.props.deadline), 1000)
   }
+  
+  componentWillUnmount() {
+    clearInterval();
+  }
 
   leading0(num) {
     return num < 10 ? '0' + num : num;
@@ -41,6 +45,10 @@ class Clock extends Component {
   }
 
   render() {
+    const {
+      months, weeks, days, hours, minutes, seconds
+    } = this.state;
+ 
     return (
       <div className = 'countdown-timer'>
         <div>
@@ -50,27 +58,27 @@ class Clock extends Component {
         </div>
         <div>
           <div className = 'd-inline'>
-            {this.leading0(this.state.months)}
+            {this.leading0(months)}
             <span className = 'mini-text'>Months</span>
           </div>
           <div className = 'd-inline'>
-            {this.leading0(this.state.weeks)}
+            {this.leading0(weeks)}
             <span className = 'mini-text'>Weeks</span>
           </div>
           <div className = 'd-inline'>
-            {this.leading0(this.state.days)}
+            {this.leading0(days)}
             <span className = 'mini-text'>Days</span>
           </div>
           <div className = 'd-inline'>
-            {this.leading0(this.state.hours)}
+            {this.leading0(hours)}
             <span className = 'mini-text'>Hours</span>
           </div>
           <div className = 'd-inline'>
-            {this.leading0(this.state.minutes)}
+            {this.leading0(minutes)}
             <span className = 'mini-text'>Minutes</span>
           </div>
           <div className = 'd-inline'>
-            {this.leading0(this.state.seconds)}
+            {this.leading0(seconds)}
             <span className = 'mini-text'>Seconds</span>
           </div>
         </div>
