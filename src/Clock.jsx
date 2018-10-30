@@ -20,6 +20,10 @@ class Clock extends Component {
   componentDidMount() {
     setInterval(() => this.getTimeUntil(this.props.deadline), 1000)
   }
+  
+  componentWillUnmount() {
+    clearInterval();
+  }
 
   leading0(num) {
     return num < 10 ? '0' + num : num;
