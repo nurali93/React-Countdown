@@ -36,8 +36,6 @@ class Clock extends Component {
     const months = Math.floor(time / (1000 * 60 * 60 * 24) / 30);
 
     this.setState({months, weeks, days, hours, minutes, seconds});
-
-
   }
 
   render() {
